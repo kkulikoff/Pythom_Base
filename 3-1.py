@@ -3,8 +3,10 @@
 # Числа запрашивать у пользователя, предусмотреть обработку ситуации деления на ноль
 
 
-def my_func (x, y):
+def my_func (*args):
     try:
+        x = int(input("Enter x = "))
+        y = int(input("Enter y = "))
         z = x / y
         return z
     except ZeroDivisionError:
@@ -17,5 +19,4 @@ def to_fixed(numObj, digits=0):
     return f"{numObj:.{digits}f}"
     
     
-result = (my_func(int(input("Enter x = ")), int(input("Enter y = "))))
-print(to_fixed(result, 2))
+print(to_fixed(my_func(), 2))
