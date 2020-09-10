@@ -1,0 +1,4 @@
+qwerty
+asdfgh asdf
+zxc vbn zxc
+подсчет количества строй и слов в строках
