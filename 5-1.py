@@ -17,3 +17,4 @@ my_file = open("my_file_5-1.txt")
 lines = my_file.readlines()
 for line in lines:
     print(line, end='')
+my_file.close()
