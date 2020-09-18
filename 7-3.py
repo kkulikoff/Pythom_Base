@@ -27,10 +27,24 @@ class Organic():
     def __truediv__(self, other):
         return int(self.size / other.size)
 
-org_1 = Organic(10)
-org_2 = Organic(20)
+    def make_order(self, row_cage):
+        row = ''
+        for i in range(int(self.size / row_cage)):
+            row += f'{"*" * row_cage} \n'
+        row += f'{"*" * (self.size % row_cage)}'
+        return row
 
-print('add:', org_1 + org_2)
-print('sub:', org_2 - org_1)
-print('mul:', org_1 * org_2)
-print('div:', org_1 / org_2)
+org_1 = Organic(10)
+org_2 = Organic(23)
+
+print('add:', org_1 + org_2)  # add: 33
+print('sub:', org_2 - org_1)  # sub: 13
+print('mul:', org_1 * org_2)  # mul: 230
+print('div:', org_1 / org_2)  # div: 0
+print(org_2.make_order(6))    
+'''
+****** 
+****** 
+****** 
+*****
+'''
